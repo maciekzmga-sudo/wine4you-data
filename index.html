@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine4You - Katalog Win</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🍷 Wine4You</h1>
+        <p>Katalog win premium</p>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Szukaj po indeksie lub nazwie wina...">
+            
+            <div class="filters">
+                <select id="colorFilter">
+                    <option value="">Wszystkie kolory</option>
+                    <option value="Białe">Białe</option>
+                    <option value="Czerwone">Czerwone</option>
+                    <option value="Różowe">Różowe</option>
+                    <option value="Pomarańczowe">Pomarańczowe</option>
+                </select>
+
+                <select id="countryFilter">
+                    <option value="">Wszystkie kraje</option>
+                </select>
+
+                <input type="number" id="priceMin" placeholder="Cena min">
+                <input type="number" id="priceMax" placeholder="Cena max">
+                <button id="resetBtn">Resetuj filtry</button>
+            </div>
+        </div>
+
+        <div id="wineCount" class="wine-count"></div>
+
+        <div id="wineList" class="wine-grid"><p class="loading">Ładowanie win...</p>
+        </div>
+
+        <!-- Modal szczegółów wina -->
+        <div id="wineModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="wineDetails"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Wine4You | Dane aktualizowane automatycznie z GitHub</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
